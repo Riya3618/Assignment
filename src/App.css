@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button.active {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown {
+  margin-top: 20px;
+  width: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.dropdown option {
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .strategy-name {
+  font-size: 18px;
+}
+
+.card .strategy-count {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card .strategy-count .count-circle {
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.empty-state {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+}
+.strategy-card .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-left: 5px;
 }
